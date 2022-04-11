@@ -34,7 +34,7 @@ fig, ax = plt.subplots(1,1,figsize=(10,5))
 def velocity(x,y,t):
     vx = (phi(x,y+delta,t)-phi(x,y-delta,t))/(2*delta)
     vy = (phi(x-delta,y,t)-phi(x+delta,y,t))/(2*delta)
-    return vx,vy
+    return vx,vy                              ############################# return -1*vx,-1*vy
 
 def txtout(vx,vy,t):
     np.savetxt("./txt_data/X_Velocity %.2f.txt"%t,vx,delimiter=', ', newline='\n',)
