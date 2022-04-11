@@ -39,7 +39,7 @@ def velocity(x,y,t):
     vy = (phi(x-delta,y,t)-phi(x+delta,y,t))/(2*delta)
     return -1*vx,-1*vy
 	
-def interp(x,y,t):
+def interp(x,y,t):     ############################# 插值得到新位置处的速度
     vx,vy=readcsv(t)
     top = np.ceil(y*partition).astype(int)
     #print((y*partition).astype(int))
